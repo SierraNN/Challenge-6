@@ -8,7 +8,7 @@ var request = new XMLHttpRequest();
 
 function handleSearch(event) {
     event.preventDefault();
-    var searchName = city.val().trim();
+    var searchName = $('#search-name-input').val().trim();
     printsearchData(searchName);
     searchFormEl[0].reset();
 }
@@ -27,44 +27,23 @@ function getLocation(event){
     fetch(queryURL) 
 
         .then(function(response){
-            return response.json();
-        })
-        .then(function(data){
-            console.log(data);
-            console.log("array", data[0])
-
-            var cityName = data[0].name;
-            console.log("cityName", cityName);
-            cityEl.textContent = cityName;
-            
-
-            var lat = data[0].lat;
-            var lon = data[0].lon;
-
-
-    fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=d2e2c17de561fb5216c9679df62394b5&units=imperial')
-
-        .then(function(response){
         return response.json();
         }).then(function(data){
             
-            var weatherType = data.current.weather_main;
-            var weatherDesc = data.current.weather_description;
-            var dateTime = data.current.dt;
-            var temp = data.current.temp;
-            var tempHigh = data.current.temp_max;
-            var tempLow = data.current.temp_min;
-            var wind = data.current.wind_speed;
-            var humidity = data.current.humidity;
-            var uvi = data.current.uvi;
+            var weatherType = data.weather_main;
+            var weatherDesc = data.weather_description;
+            var dateTime = data.dt;
+            var temp = data.temp;
+            var tempHigh = data.temp_max;
+            var tempLow = data.temp_min;
+            var wind = data.wind_speed;
+            var humidity = data.humidity;
+            var uvi = data.uvi;
             
             console.log(weatherType, weatherDesc, dateTime, temp, tempHigh, tempLow, wind, humidity, uvi);
 
         })
-
-        });
-
 };
 
-searchFormEl.on('submit', handleSearch, getLocation);
-
+searchFormEl.on('submit', handleSearch);
+searchFormEl.on('submit', getLocation);
