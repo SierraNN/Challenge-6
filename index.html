@@ -1,22 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-  
-<head>
-  <meta charset="UTF-8" />
-  <title>jQuery DOM elements</title>
-  <link rel="stylesheet" href="./assets/css/jass.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <header>
+        <h1 class="head">Weather Dashboard</h1>
+    </header>
+    <body>
+            <h2 class="title" >Search for a City:</h2>
+            <form id="search-form">
+                <input type="text" id="search-name-input" class="form-control" placeholder="Enter city name..."
+                required />
+                <button class="button btn-success" type="submit" id="weatherLocation">Search</button>
+            </form>
+        
+            <section class="col-1 col-md-8 col-lg-9">
+                <div class="table-responsive">
+                  <table class="table table-bordered custom-table">
+                    <thead>
+                      <tr>
+                        <th scope="col"></th>
+                        <th scope="col" class="p-3"></th>
+                      </tr>
+                    </thead>
+                    <tbody id="search-display"></tbody>
+                  </table>
+                </div>
+            </section>
+<!-- 
+            <p>
+                <h3>Content</h3>
+                <div class="showErrors"></div>
+                <div class="showHumidity"></div>
+                <div class="showTemp"></div>
+            </p> -->
 
-</head>
-
-<body class="bg-dark text-light text-center">
-  <!-- This empty `<div>` will anchor the elements we create with jQuery. -->
-  <div class="m-5" id="root"></div>
-
-  <!-- Added link to the jQuery library -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
-  <script type="text/javascript" src="./assets/js/script.js"></script>
-</body>
-
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+        <script src="./assets/css/js/script.js"></script>
+    </body>
 </html>
+

@@ -1,0 +1,26 @@
+body{
+    background-color:white;
+}
+
+header{
+    background-image: linear-gradient(to right,rgb(2, 154, 254), rgb(46, 27, 114));
+}
+
+button{
+    width:auto;
+    background-color: rgb(2, 154, 254);
+}
+
+.custom-table tbody {
+    background-color: var(--darkblue);
+    color: var(--light);
+  }
+
+.head{
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+    font-size: medium;
+}
