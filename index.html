@@ -7,9 +7,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     </head>
     <header>
-        <h1 class="head">Weather Dashboard</h1>
+        <h1 class="head is-size-2 has-text-white">Weather Dashboard</h1>
     </header>
     <body>
             <h2 class="title" >Search for a City:</h2>
@@ -19,28 +20,29 @@
                 <button class="button btn-success" type="submit" id="weatherLocation">Search</button>
             </form>
         
-            <section class="col-1 col-md-8 col-lg-9">
-                <div class="table-responsive">
-                  <table class="table table-bordered custom-table">
-                    <thead>
-                      <tr>
-                        <th scope="col"></th>
-                        <th scope="col" class="p-3"></th>
-                      </tr>
-                    </thead>
-                    <tbody id="search-display"></tbody>
-                  </table>
-                </div>
+            <section>
+              <p id="search-display"></p>
             </section>
-<!-- 
-            <p>
-                <h3>Content</h3>
-                <div class="showErrors"></div>
-                <div class="showHumidity"></div>
-                <div class="showTemp"></div>
-            </p> -->
 
-    
+            <div class="columns">
+              <div class="column"></div>
+              <div class="column"></div>
+              <div class="card">
+                <div class="column card-content">
+                  <div class="content">
+                    <p id="weather-name"></p>
+                    <p>Current Conditions: <span id="weather-data"></span></p>
+                    <p>Current Temp: <span id="weather-temp"></span>  K</p>
+                    <p>Current High: <span id="weather-temp-high"></span>  K</p>
+                    <p>Current Low: <span id="weather-temp-low"></span>  K</p>
+                    <p>Current Humidity: <span id="weather-humidity"></span>%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="column"></div>
+              <div class="column"></div>
+            </div>
+            
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
         <script src="./assets/css/js/script.js"></script>
