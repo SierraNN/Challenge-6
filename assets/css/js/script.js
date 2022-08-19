@@ -6,20 +6,14 @@ var weatherTempEl = $('#weather-temp');
 var weatherTempHighEl = $('#weather-temp-high');
 var weatherTempLowEl = $('#weather-temp-low');
 var weatherHumidityEl = $('#weather-humidity');
-
 var searchFormEl = $('#search-form');
-var queryURL = null;
-var weatherType = null;
-var weatherDesc = null;
-var dateTime = null;
-var temp = null;
-var tempHigh =  null;
-var tempLow = null;
-var wind = null;
-var humidity = null;
 var searchName= "";
 var request = new XMLHttpRequest();
 
+document.getElementById('container').style.visibility = "hidden";
+document.getElementById("button").addEventListener("click", function() {
+    document.getElementById('container').style.visibility = "visible";
+  });
 
 function handleSearch(event) {
     event.preventDefault();
@@ -54,12 +48,7 @@ function printsearchData(name) {
     searchDisplayEl.append(searchRowEl);
 }
 
-// function printWeatherData(name) {
-//     var searchRowEl = $('<ts>');
-//     var searchNameTdEl = $('<td>').addClass('p-2').text(name);
-//     searchRowEl.append(searchNameTdEl);
-//     weatherDisplay.textcontent = weatherData.name;
-// }
+
 
 searchFormEl.on('submit', handleSearch);
-//searchFormEl.on('submit', printWeatherData);
+

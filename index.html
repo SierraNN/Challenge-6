@@ -14,10 +14,10 @@
     </header>
     <body>
             <h2 class="title" >Search for a City:</h2>
-            <form id="search-form">
+            <form id="search-form" name="myForm">
                 <input type="text" id="search-name-input" class="form-control" placeholder="Enter city name..."
                 required />
-                <button class="button btn-success" type="submit" id="weatherLocation">Search</button>
+                <button class="button btn-success" type="submit" id="button" >Search</button>
             </form>
         
             <section>
@@ -27,18 +27,20 @@
             <div class="columns">
               <div class="column"></div>
               <div class="column"></div>
-              <div class="card">
-                <div class="column card-content">
-                  <div class="content">
-                    <p id="weather-name"></p>
-                    <p>Current Conditions: <span id="weather-data"></span></p>
-                    <p>Current Temp: <span id="weather-temp"></span>  K</p>
-                    <p>Current High: <span id="weather-temp-high"></span>  K</p>
-                    <p>Current Low: <span id="weather-temp-low"></span>  K</p>
-                    <p>Current Humidity: <span id="weather-humidity"></span>%</p>
+
+              <div class="column">
+                <div id='container'>
+                  <div class="card card-content">
+                    <h1 id="weather-name" class="has-text-link is-size-2"></h1>
+                    <h2 class="is-size-4">Current Conditions: <span id="weather-data"></span></h2>
+                    <p class="is-size-2"><span id="weather-temp"></span>  K</p>
+                    <p>High: <span id="weather-temp-high"></span>  K</p>
+                    <p>Low: <span id="weather-temp-low"></span>  K</p>
+                    <p>Humidity: <span id="weather-humidity"></span>%</p>
                   </div>
                 </div>
               </div>
+
               <div class="column"></div>
               <div class="column"></div>
             </div>
