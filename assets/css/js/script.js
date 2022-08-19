@@ -23,7 +23,7 @@ function handleSearch(event) {
 }
 
 function getLocationWeather(location){
-    queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + APIKey;
+    queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + location + "&appid=" + APIKey + "&units=imperial";
 
     fetch (queryURL)
         .then((responseObject) =>{
