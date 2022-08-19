@@ -32,12 +32,12 @@ function getLocationWeather(location){
         .then((weatherData) =>{
             console.log(weatherData);
 
-            weatherNameEl.append(weatherData.name);
-            weatherDisplayEl.append(weatherData.weather[0].description);
-            weatherTempEl.append(weatherData.main.temp);
-            weatherTempHighEl.append(weatherData.main.temp_max);
-            weatherTempLowEl.append(weatherData.main.temp_min);
-            weatherHumidityEl.append(weatherData.main.humidity);
+            weatherNameEl.html(weatherData.name);
+            weatherDisplayEl.html(weatherData.weather[0].description);
+            weatherTempEl.html(weatherData.main.temp);
+            weatherTempHighEl.html(weatherData.main.temp_max);
+            weatherTempLowEl.html(weatherData.main.temp_min);
+            weatherHumidityEl.html(weatherData.main.humidity);
         })
 }
 
